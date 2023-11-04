@@ -4,6 +4,36 @@
 
 <hr>
 
+<form action = "/insert_movie" method="post">
+  <div>
+    <label for ="title">Title</label>
+    <input type="text" id="title" name="movie_title">
+  </div>
+  <div>
+    <label for ="year">Year</label>
+    <input type="text" id="year" name="movie_year">
+  </div>
+  <div>
+    <label for ="duration">Duration</label>
+    <input type="text" id="duration" name="movie_duration">
+  </div>
+  <div>
+    <label for ="description">Description</label>
+    <textarea id="description" name="movie_description" rows="3"></textarea>
+  </div>
+    <label for ="img">Image</label>
+    <input type="text" id="img" name="movie_img">
+  </div>
+  <div>
+    <label for ="director">Director ID</label>
+    <input type="text" id="director" name="movie_director">
+  </div>
+  <div>
+  <button type="submit">Create movie</button>
+</form>
+
+<hr>
+
 <table border="1">
   <tr>
     <th>
@@ -53,7 +83,15 @@
       
       <% the_director = matching_directors.at(0) %>
 
+      <% if the_director == nil %>
+
+      <p>No Record</p>
+
+      <% else %>
+
       <%= the_director.name %>
+
+      <% end%>
     </td>
 
     <td>

@@ -16,4 +16,12 @@ Rails.application.routes.draw do
   post "/insert_actor", controller: "actors", action: "insert"
   post "/update_actor/:id", controller: "actors", action: "update"
   get "/delete_actor/:id", controller: "actors", action: "delete"
+
+  post "/insert_director", controller: "directors", action: "insert"
+  post "/update_director/:id", controller: "directors", action: "update"
+  get "/delete_director/:id", controller: "directors", action: "delete"
+
+  post "/insert_movie", controller: "movies", action: "insert"
+  post "/update_movie/:id", controller: "movies", action: "update"
+  get "/delete_movie/:id", controller: "movies", action: "delete"
 end
