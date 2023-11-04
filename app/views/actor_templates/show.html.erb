@@ -2,9 +2,39 @@
   Actor #<%= @the_actor.id %> details
 </h1>
 
+<div>
 <a href="/actors">
   Go back
 </a>
+</div>
+
+<div>
+<a href="/delete_actor/<%= @the_actor.id %>">
+  Delete actor
+</a>
+</div>
+
+<hr>
+
+<form action = "/update_actor/<%= @the_actor.id %>" method="post">
+  <div>
+    <label for ="name">Name</label>
+    <input tpe="text" id="name" name="actor_name" value="<%= @the_actor.name %>">
+  </div>
+  <div>
+    <label for ="dob">Dob</label>
+    <input tpe="date" id="dob" name="actor_dob" value="<%= @the_actor.dob %>">
+  </div>
+  <div>
+    <label for ="bio">Bio</label>
+    <textarea id="bio" name="actor_bio" rows="3" value="<%= @the_actor.bio %>"></textarea>
+  </div>
+  <div>
+    <label for ="img">Image</label>
+    <input tpe="text" id="img" name="actor_img" value="<%= @the_actor.image %>">
+  </div>
+  <button type="submit">Update actor</button>
+</form>
 
 <hr>
 
